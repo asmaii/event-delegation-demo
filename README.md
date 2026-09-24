@@ -1,30 +1,43 @@
-# Event Delegation — JavaScript & Tailwind CSS
+Event Delegation Demo — JavaScript & Tailwind CSS
 
-An interactive front-end demo showcasing **Event Delegation in JavaScript** with a responsive interface built using **Tailwind CSS**.
+Interactive front-end demo created to demonstrate Event Delegation with Vanilla JavaScript, the DOM API, dynamic DOM elements and a responsive interface built with Tailwind CSS.
 
-The project demonstrates how a single event listener attached to a parent element can handle interactions with multiple child elements — including elements that are added dynamically to the DOM.
+🎯 Objective
 
-## ✨ Demo
+The goal of this project is to show, through a practical interface, how a single event listener attached to a parent element can manage interactions with multiple child elements.
 
-The interface contains a list of projects that can be selected to display their preview.
+The demo also shows that elements added dynamically can use the same listener without registering a new eventListener for each button.
 
-You can also add new projects dynamically using the **"Ajouter un projet"** button.
+✨ Features
 
-The important part of the demo is that newly added projects work with the same event listener without requiring a new listener for each button.
+Event Delegation with a single click listener
 
-## 🧠 What is demonstrated?
+Dynamic DOM element creation
 
-### Event Delegation
+Dynamic project selection
 
-Instead of attaching an event listener to every project button:
+Project preview updated according to the selected item
 
-```javascript
-button.addEventListener("click", ...)
-```
+New projects can be added at runtime
 
-the demo attaches a single listener to the parent container:
+Same event listener works with dynamically added projects
 
-```javascript
+Responsive layout for desktop, tablet and mobile
+
+Tailwind CSS utility classes
+
+Interactive hover and selected states
+
+Smooth UI transitions
+
+Accessible semantic/ARIA attributes
+
+SEO metadata and structured data
+
+🧠 Event Delegation
+
+Instead of attaching an event listener to every project button, the demo listens for clicks on the parent project list:
+
 list.addEventListener("click", (e) => {
   const button = e.target.closest(".item__button");
 
@@ -35,68 +48,109 @@ list.addEventListener("click", (e) => {
 
   showProject(projectId);
 });
-```
 
-This approach allows the same listener to handle both existing and dynamically created elements.
+When a new project is added dynamically, no new listener is required.
 
-## 🎨 Features
+This is the main concept demonstrated by the project.
 
-* Event Delegation with JavaScript
-* Dynamic DOM elements
-* Interactive project selection
-* Dynamic project creation
-* Project preview updates
-* Responsive interface
-* Tailwind CSS styling
-* Hover and selection states
-* Smooth UI transitions
-* No JavaScript framework required
+🔧 Concepts demonstrated
 
-## 🛠️ Technologies
+Event Delegation
 
-* **HTML5**
-* **JavaScript (Vanilla JS)**
-* **Tailwind CSS**
-* **DOM API**
-* **Event Delegation**
+Event Bubbling
 
-## 📂 Project Structure
+Event Listener
 
-```text
-event-delegation/
-│
+DOM API
+
+closest()
+
+dataset / data-* attributes
+
+Dynamic DOM manipulation
+
+Dynamic elements
+
+Responsive Design
+
+Tailwind CSS
+
+Front-End Development
+
+🛠️ Technologies
+
+HTML5
+
+Vanilla JavaScript
+
+Tailwind CSS
+
+DOM API
+
+CSS / responsive utilities
+
+Tailwind CSS is loaded through the CDN, so no build process is required for this demo.
+
+📱 Responsive Design
+
+The interface adapts to different screen sizes:
+
+Mobile: content is displayed in a single column and project buttons become full-width.
+
+Tablet: the interface remains stacked to preserve readability and spacing.
+
+Desktop: the hero and project/preview sections use a multi-column layout.
+
+The responsive behavior is implemented with Tailwind CSS responsive utilities.
+
+🚀 Run the project
+
+No installation is required.
+
+Clone the repository:
+
+git clone https://github.com/YOUR-USERNAME/event-delegation-demo.git
+
+Open index.html in your browser.
+
+Because Tailwind CSS is loaded from the CDN, an internet connection is required when opening the page.
+
+📂 Project structure
+
+event-delegation-demo/
 ├── index.html
 └── README.md
-```
 
-## 🚀 Getting Started
+🔍 SEO
 
-### 1. Clone the repository
+The HTML page includes:
 
-```bash
-git clone https://github.com/YOUR-USERNAME/event-delegation.git
-```
+SEO title
 
-### 2. Open the project
+Meta description
 
-Open `index.html` directly in your browser.
+Keywords
 
-No build process or package installation is required.
+Author metadata
 
-## 💡 Why Event Delegation?
+Robots directive
 
-Event Delegation is particularly useful when working with lists, tables, menus, or interfaces where elements can be added or removed dynamically.
+Open Graph metadata
 
-Instead of creating multiple event listeners, one listener on a parent element can handle events coming from its children.
+Twitter/X metadata
 
-This can make event handling simpler and easier to maintain.
+JSON-LD structured data
 
-## 👩‍💻 Author
+Semantic HTML and ARIA attributes
 
-**Asma Hammami**
+👩‍💻 Author
+
+Asma Hammami
 
 Front-End Developer / Web Integrator
 
----
+Topics
 
-⭐ If you find this demo useful, feel free to explore the code and experiment with Event Delegation.
+JavaScript Event Delegation DOM Tailwind CSS Responsive Design Front-End Development Web Development Dynamic DOM
+
+⭐ A small practical demo focused on clean event handling and responsive front-end integration.
